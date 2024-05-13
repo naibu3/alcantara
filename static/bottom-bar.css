@@ -1,0 +1,21 @@
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;  /* Ensure the footer is above other elements */
+}
+/*Volver al inicio*/
+.return-to-home a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.return-to-home a:hover {
+    color: #2980b9;
+}

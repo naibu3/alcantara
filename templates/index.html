@@ -1,0 +1,23 @@
+{% load static %}   {# Para carga de archivos estáticos #}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {# Carga de una hoja de estilos #}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    
+    <title>Alcantara</title>
+</head>
+<body>
+    <h1 id>Esta es la pagina principal</h1>
+
+    
+
+    {% comment %}
+        Esto es un comentario multilinea en django
+    {% endcomment %}
+</body>
+</html>

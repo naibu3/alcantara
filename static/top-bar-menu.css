@@ -1,0 +1,75 @@
+/* Header styles */
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.top-bar-menu {
+    background: linear-gradient(to right, #3498db, #2980b9);
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.menu-title {
+    margin-right: 5px;
+    margin-left: 25px;
+}
+
+.menu-item {
+    margin-right: 5px;
+}
+
+.menu-item:first-child {
+    margin-left: 10px;
+}
+
+.menu-item a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff; /* You can change the text color as needed */
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.menu-item a:hover {
+    background-color: #9ec7f5; /* You can change the hover color as needed */
+}
+
+.menu-search-bar {
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.menu-search-bar input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.menu-search {
+    margin-right: 5px;
+}
+
+.menu-search-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #272727; /* You can change the background color as needed */
+    border: none;
+    color: #ffffff; /* You can change the text color as needed */
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.menu-search a:hover {
+    background-color: #9ec7f5; /* You can change the hover color as needed */
+}
+
+.menu-item-form {
+    margin-right: 10px;
+    margin-left: auto;
+    display: flex;
+}
