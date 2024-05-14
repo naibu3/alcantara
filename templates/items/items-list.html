@@ -1,0 +1,54 @@
+{% extends "items/base/items-base.html" %}
+
+{% block title %}Items list{% endblock %}
+
+{% block header_title %}List items{% endblock %}
+
+{% block content %}
+
+{# Formulario oculto para borrar items #}
+<form id="deleteForm" action="{% url 'delete-item' %}" method="POST" style="display: none;">
+    {% csrf_token %}
+    <input type="hidden" name="name" id="itemIdInput" value="">
+</form>
+
+{# Tabla para listar items #}
+<table class="items-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Comment</th>
+            <th>Units</th>
+            <th>Place</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for item in items %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.comment }}</td>
+            <td>{{ item.uds }}</td>
+            <td>{{ item.place }}</td>
+            <td><a href="{% url 'update-item-form' name=item.name %}" method="GET">Edit</a></td>
+            <td><button onclick="deleteItem('{{ item.name }}')">Delete</button></td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{# Script que envia el formulario para borrar el item #}
+<script>
+    function deleteItem(itemId) {
+        document.getElementById('itemIdInput').value = itemId;
+        console.log(itemId);
+        document.getElementById('deleteForm').submit();
+    }
+</script>
+
+{% endblock %}
+
+{% block footer %}
+<p class="return-to-home">Volver al <a href="{% url 'index' %}">inicio</a></p>
+{% endblock %}

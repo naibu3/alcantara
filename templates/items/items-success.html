@@ -1,0 +1,13 @@
+{% extends "items/base/items-base.html" %}
+
+{% block title %}Items success{% endblock %}
+
+{% block header_title %}Success{% endblock %}
+
+{% block content %}
+<p>{{ status }}</p>
+{% endblock %}
+
+{% block footer %}
+<p class="return-to-home">Volver al <a href="{% url 'index' %}">inicio</a></p>
+{% endblock %}

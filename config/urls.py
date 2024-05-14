@@ -17,9 +17,12 @@ from django.contrib import admin
 from django.urls import path, include
 from alcantara import views
 
+#Auth
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('items/', include('items.urls'))
+    path('items/', include('items.urls')),
+    path('login/', include("allauth.urls")), #Auth
 ]
